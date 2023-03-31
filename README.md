@@ -1,5 +1,5 @@
 #  Stock Pattern Analysis :money_with_wings::chart: </p>
-<img src="https://user-images.githubusercontent.com/112334326/228930065-efd1f97d-f843-46d4-96db-8b0527d3bb4d.png"  width="1200" height="250" />
+<img src="https://user-images.githubusercontent.com/112334326/228930065-efd1f97d-f843-46d4-96db-8b0527d3bb4d.png"  width="1200" height="200" />
 This repository is dedicated to explain about my project on analysis and create the Machine learning model to clustering the stock pattern and adapt it with trading strategy. Moreover, This is one of the final project of the data master course
 
 ## Key Concept
