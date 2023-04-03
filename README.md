@@ -58,19 +58,25 @@ As you know, First step of all data work, preparation of the data for our model.
 - NFLX[Netflix] 
 - BITCOIN 
 
-from 1 MAY 2013 to 14 MAY 2019 . So I chose the NFLX stock to use in my model due to the familiarity and because I am one of their customer :stuck_out_tongue_closed_eyes:. In addition, I fulfiled my data-set by downloading the daily volume from yahoo-finance. Here is the close price plot in graph with simple moving average from 1 MAY 2013 to 14 MAY 2019.
+from 4 APR 2013 to 14 MAY 2019 . So I chose the NFLX stock to use in my model due to the familiarity and because I am one of their customer :stuck_out_tongue_closed_eyes:. In addition, I fulfiled my data-set by downloading the daily volume from yahoo-finance. Here is the close price plot in graph with simple moving average from 4 APR 2013 to 14 MAY 2019.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/112334326/229566739-c39fba4e-ff22-4356-9683-748e157a7e9a.png"   />
 </p>
- <p align="center"> Pic 6 NFLX close price(Black) with 20D simple moving average(red) from 1 MAY 2013 to 14 MAY 2019.</p>
+ <p align="center"> Pic 6 NFLX close price(Black) with 20D simple moving average(red) from 4 ARP 2013 to 14 MAY 2019.</p>
 After we download the data and check none is missing. I began to extract the pattern of from the stock by dividing the stock price in to the n part or "Window" to use in our model show as in the pic 7.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/112334326/229568008-b67dd63e-4d86-4725-bb03-35773b60beb9.png"   />
 </p>
+ <p align="center"> Pic 7 NFLX close price dividing to small window.</p>
 Nevertheless, This divided windows alone are not enough to represent the pattern. Because the pattern may change related to the time and the position of the window.To be Clarify, let's see the example below
 
- <p align="center"> Pic 7 NFLX close price dividing to small window.</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/112334326/229572508-b5f95546-fafb-4e39-a25a-6677cb567ade.png"   />
+</p>
+ <p align="center"> Pic 8 The diffence of the window by vary the start time</p>
+ 
+ Pic 8 show us the two diffent window which have diffent starting point. As you can see, If we change the starting point of the window from 24 APR 2013 (pink frame) to 10 MAY 2013(yellow frame). the pattern of the data that we divided is change. That's why we need to sliding the window cover the pattern.
 
 
 
