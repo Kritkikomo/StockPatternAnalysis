@@ -76,7 +76,7 @@ Nevertheless, This divided windows alone are not enough to represent the pattern
 </p>
  <p align="center"> Pic 8 The diffence of the window by vary the start time</p>
  
- Pic 8 show us the two diffent window which have diffent starting point. As you can see, If we change the starting point of the window from 24 APR 2013 (pink frame) to 10 MAY 2013(yellow frame). the pattern of the data that we divided is change. That's why we need to sliding the window cover the pattern.
+ Pic 8 show us the two diffent window which have diffent starting point. As you can see, If we change the starting point of the window from 24 APR 2013 (pink frame) to 10 MAY 2013(yellow frame). the pattern of the data that we divided is change. That's why we need to slide the window to cover most of the pattern.
 
 
 
