@@ -63,6 +63,9 @@ from 4 APR 2013 to 14 MAY 2019 . So I chose the NFLX stock to use in my model du
   <img src="https://user-images.githubusercontent.com/112334326/229566739-c39fba4e-ff22-4356-9683-748e157a7e9a.png"   />
 </p>
  <p align="center"> Pic 6 NFLX close price(Black) with 20D simple moving average(red) from 4 ARP 2013 to 14 MAY 2019.</p>
+ 
+#### 1.1 Window slice and slide
+
 After we download the data and check none is missing. I began to extract the pattern of from the stock by dividing the stock price in to the n part or "Window" to use in our model show as in the pic 7.
 
 <p align="center">
@@ -77,6 +80,9 @@ Nevertheless, This divided windows alone are not enough to represent the pattern
  <p align="center"> Pic 8 The diffence of the window by vary the start time</p>
  
  Pic 8 show us the two diffent window which have diffent starting point. As you can see, If we change the starting point of the window from 24 APR 2013 (pink frame) to 10 MAY 2013(yellow frame). the pattern of the data that we divided is change. That's why we need to slide the window to cover most of the pattern.
+
+#### 1.2 Mean-Variance Scaling
+After we divide the stock signal in to window. The signal in each window has different level of the price
 
 
 
