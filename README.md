@@ -82,7 +82,7 @@ Nevertheless, This divided windows alone are not enough to represent the pattern
  Pic 8 show us the two diffent window which have diffent starting point. As you can see, If we change the starting point of the window from 24 APR 2013 (pink frame) to 10 MAY 2013(yellow frame). the pattern of the data that we divided is change. That's why we need to slide the window to cover most of the pattern.
 
 #### 1.2 Mean-Variance Scaling
-After we divide the stock signal in to window. The signal in each window has different level of the price
+After we divide the stock signal in to the window. The signal in each window has different level of the price. In this project, we will focus on only the moving pattern and the volume.
 
 
 
