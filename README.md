@@ -92,13 +92,15 @@ Have you ever wonder how the google assistant or siri can distinguish between wh
   <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/5a3e7d04-b43a-46b4-90cd-27d17f74cbe2"  width="250" height="300" />
 </p>
  <p align="center"> Pic 9 Euclidean Matchin and Dynamic Time Warping Matching[3]</p>
- So from the application, I thought this algorithm is suitable for our model because sometimes the pattern of the stock price do not have possess the same amout of time. As you can in Pic 10 the price pattern form in the same cup with handle pattern.However, the time and the dept of the cup are not the same in cup A and B. That is why DTW is the key role of this problem
+ So from the application, I thought this algorithm is suitable for our model because sometimes the pattern of the stock price do not have possess the same amout of time. As you can in Pic 10 the price pattern form in the same cup with handle pattern.However, the time and the dept of the cup are not the same in cup A and B. That is why DTW is the key role to overcome these problems.
+ 
 <p align="center">
   <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/263adf05-4698-4b0c-ab01-fa6ee2dff95c"   />
 </p>
  <p align="center"> Pic 10 The cup with handle pattern </p>
-
-
+#### 2.2 TimeSeriesKMeans
+After we got the DTW algoritrhm. Next, we use the <a href ="https://tslearn.readthedocs.io/en/stable/user_guide/clustering.html#k-means-and-dynamic-time-warping">TimeSeriesKMeans</a> library to cluster the all the window data that we prepared in step 2. The parameter that I focused are window size which is size of the data in one window, the window slide step the step that window was slided for each time, and the number of the cluster.
+### 3.Evaluation the model
 Source
 [1] https://www.vantagemarkets.com/en-au/education/how-to-trade-volatility-compression-patterns-vcp/
 
