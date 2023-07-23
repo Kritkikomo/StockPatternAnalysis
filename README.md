@@ -98,6 +98,7 @@ Have you ever wonder how the google assistant or siri can distinguish between wh
   <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/263adf05-4698-4b0c-ab01-fa6ee2dff95c"   />
 </p>
  <p align="center"> Pic 10 The cup with handle pattern </p>
+ 
 #### 2.2 TimeSeriesKMeans
 After we got the DTW algoritrhm. Next, we use the <a href ="https://tslearn.readthedocs.io/en/stable/user_guide/clustering.html#k-means-and-dynamic-time-warping">TimeSeriesKMeans</a> library to cluster the all the window data that we prepared in step 2. The parameter that I focused are window size which is size of the data in one window, the window slide step the step that window was slided for each time, and the number of the cluster.
 ### 3.Evaluation the model
