@@ -82,7 +82,10 @@ Nevertheless, This divided windows alone are not enough to represent the pattern
  Pic 8 show us the two diffent window which have diffent starting point. As you can see, If we change the starting point of the window from 24 APR 2013 (pink frame) to 10 MAY 2013(yellow frame). the pattern of the data that we divided is change. That's why we need to slide the window to cover most of the pattern.
 
 #### 1.2 Mean-Variance Scaling
-After we divide the stock signal in to the window. The signal in each window has different level of the price. In this project, we will focus on only the moving pattern and the volume.
+After we divide the stock signal in to the window. The signal in each window has different level of the price. In this project, we will focus on only the moving pattern and the volume. So we will normalize all the divided price window by using mean-variance scaling.
+
+### 2. Training Model
+Training a model is essential part of the project. If we choose the unsuitable model, the result would might not be good. In this project I use the Dynamic time warping algorithm with the TimeseriesKmeans to clustering the price pattern.
 
 
 
