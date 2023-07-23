@@ -85,11 +85,23 @@ Nevertheless, This divided windows alone are not enough to represent the pattern
 After we divide the stock signal in to the window. The signal in each window has different level of the price. In this project, we will focus on only the moving pattern and the volume. So we will normalize all the divided price window by using mean-variance scaling.
 
 ### 2. Training Model
-Training a model is essential part of the project. If we choose the unsuitable model, the result would might not be good. In this project I use the Dynamic time warping algorithm with the TimeseriesKmeans to clustering the price pattern.
-
+Training a model is essential part of the project. If we choose the unsuitable model, the result would might not be good like we thought. In this project I use the Dynamic time warping(DTW) algorithm with the TimeseriesKmeans to clustering the price pattern.
+#### 2.1 Dynamic Time Warping Algorithm (DTW)
+Have you ever wonder how the google assistant or siri can distinguish between when you say "Pencil" and "Peeeennciiiiill"? The Dynamic Time Warping is one of the algorithm behind these AI. The Dynamic Time Warping is an algorithm that measure the similarity between two different timeseries signal. Unlike the Euclidean distance, DTW can map the first and second signal by one-one, one-many or many-one relation as show in Pic 9. And by this property, DTW can adapt with the application like speech-recognition. 
+<p align="center">
+  <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/5a3e7d04-b43a-46b4-90cd-27d17f74cbe2"  width="250" height="300" />
+</p>
+ <p align="center"> Pic 9 Euclidean Matchin and Dynamic Time Warping Matching[3]</p>
+ So from the application, I thought this algorithm is suitable for our model because sometimes the pattern of the stock price do not have possess the same amout of time. As you can in Pic 10 the price pattern form in the same cup with handle pattern.However, the time and the dept of the cup are not the same in cup A and B. That is why DTW is the key role of this problem
+<p align="center">
+  <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/263adf05-4698-4b0c-ab01-fa6ee2dff95c"   />
+</p>
+ <p align="center"> Pic 10 The cup with handle pattern </p>
 
 
 Source
 [1] https://www.vantagemarkets.com/en-au/education/how-to-trade-volatility-compression-patterns-vcp/
 
 [2] https://pub.towardsai.net/time-series-clustering-for-stock-market-prediction-in-python-part-1-738ab6462f0e
+
+[3] https://commons.wikimedia.org/wiki/File:Euclidean_vs_DTW.jpg
