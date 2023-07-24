@@ -102,12 +102,27 @@ Have you ever wonder how the google assistant or siri can distinguish between wh
 #### 2.2 TimeSeriesKMeans
 After we got the DTW algoritrhm. Next, we use the <a href ="https://tslearn.readthedocs.io/en/stable/user_guide/clustering.html#k-means-and-dynamic-time-warping">TimeSeriesKMeans</a> library to cluster the all the window data that we prepared in step 2. The parameter that I focused are window size which is size of the data in one window, the window slide step the step that window was slided for each time, and the number of the cluster.
 ### 3.Evaluation the model
+#### 3.1 Evaluate and optimize the model
 It's time to optimize our model! I choose <a href = 'https://tslearn.readthedocs.io/en/stable/user_guide/dtw.html'>the mean of the DTW </a>to be the measurement metric. The Pic 11 show us the DTW score of the result trained model which I tuned with the window slide step, window size and the number of cluster. 
 <p align="center">
   <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/da8503c6-a791-49dd-a9d0-b5f04d07bd8f"   />
 </p>
  <p align="center"> Pic 11 The DTW of each pair signal in each group</p>  
 The Y axis show us the nth number of the pair in that cluster and the X axis show us the return DTW score of that pair. Remind you that the lower DTW score, the more likeliness. At last, I choose the the model which have the window size of 20 , step size of 10 and the 15 cluster to be the tester of the system.
+<b>You might wonder why I did not choose the 1 step size and 15 cluster. the cluster look distributes equally and the DTW score is look perfect.</b> 
+<p align="center">
+  <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/5d413a03-4603-48e9-8f67-1e2f598037f7"   />
+</p>
+ <p align="center"> Pic 12 The resulted signal after cluster</p>  
+ You can see in the Pic 12 that after we cluster. there are a greatly amount of noise in each cluster. This happens because the window was slided to frequent. And it effect the resulted clustering model make the signal in the cluster group not precise.That's why I do not use the model with to frequent window slide.
+ 
+### 4. Clustering the signal 
+After I pick the test cluster. I visulize the each signal in the cluster to see the likeliness in the cluster as show in Pic13. 
+<p align="center">
+  <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/9992efc4-d9d7-40f4-a5be-b47fdd16dad6"   />
+</p>
+ <p align="center"> Pic 13 The clustered signal with the trend probability</p>  
+
 
 Source
 [1] https://www.vantagemarkets.com/en-au/education/how-to-trade-volatility-compression-patterns-vcp/
