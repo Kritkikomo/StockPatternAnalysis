@@ -102,6 +102,13 @@ Have you ever wonder how the google assistant or siri can distinguish between wh
 #### 2.2 TimeSeriesKMeans
 After we got the DTW algoritrhm. Next, we use the <a href ="https://tslearn.readthedocs.io/en/stable/user_guide/clustering.html#k-means-and-dynamic-time-warping">TimeSeriesKMeans</a> library to cluster the all the window data that we prepared in step 2. The parameter that I focused are window size which is size of the data in one window, the window slide step the step that window was slided for each time, and the number of the cluster.
 ### 3.Evaluation the model
+It's time to optimize our model! I choose <a href = 'https://tslearn.readthedocs.io/en/stable/user_guide/dtw.html'>the mean of the DTW </a>to be the measurement metric. The Pic 11 show us the DTW score of the result trained model which I tuned with the window slide step, window size and the number of cluster. 
+<p align="center">
+  <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/da8503c6-a791-49dd-a9d0-b5f04d07bd8f"   />
+</p>
+ <p align="center"> Pic 11 The DTW of each pair signal in each group</p>  
+The Y axis show us the nth number of the pair in that cluster and the X axis show us the return DTW score of that pair. Remind you that the lower DTW score, the more likeliness. At last, I choose the the model which have the window size of 20 , step size of 10 and the 15 cluster to be the tester of the system.
+
 Source
 [1] https://www.vantagemarkets.com/en-au/education/how-to-trade-volatility-compression-patterns-vcp/
 
