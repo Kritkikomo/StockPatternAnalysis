@@ -122,6 +122,21 @@ After I pick the test cluster. I visulize the each signal in the cluster to see 
   <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/9992efc4-d9d7-40f4-a5be-b47fdd16dad6"   />
 </p>
  <p align="center"> Pic 13 The clustered signal with the trend probability</p>  
+In the Pic 13, If you can see, I also add the probability of the price trend into each cluster. These probability come from the historical data by using the maximum day that signal stay continuously above or below the simple moving average(SMA) trend line in next period window (In this case next 20 days). For example if the price of the next 20 days stay above sma for 10 days, go random for 5 days (go above and below the SMA)and stay below SMA for 5 day.In this case we will consider the trend to be uptrend.
+
+#### 4.1 Test the model
+I choose the same NFLX stock but alter the test data from the train between 14 May 2019 to 14 May 2021. Then, I use the model to clustering the 20 window size of price every 5 day to see what cluster of the signal are and use the probability of the trend that we gather to take action. 
+<p align="center">
+  <img src="https://github.com/Kritkikomo/StockPatternAnalysis/assets/112334326/6344503a-882a-44fe-8ed2-4cb3116230bf"   />
+</p>
+<p align="center"> Pic 14 The trading test  with the model</p> 
+At the end, the model works just fine. we can overcome the buy and hold strategy for 10% more profitable as you can see in Pic 14. However, the result is very surprising for me because at first I think there is a chance that this Idea might not work as well.
+
+#### 4.2 Further development
+I think there is more room for improvement. As you can see, this model is test only one stock at one period of time. There have several parameter that we should focus as well such as risks(drawdown) or the compatibility of the model with other stock. If you read until the end thank for your interest. And if you want to discuss with me you can direct message via my linkedin below. Cheer:tada::tada:!!!
+
+Mylinkedin : <a href='https://www.linkedin.com/in/chakrit-wanth/'>chakrit-wanth</a>
+
 
 
 Source
